@@ -1,5 +1,6 @@
 node {
   stage('SCM') {
+    cleanWs()
     checkout scm
   }
   
