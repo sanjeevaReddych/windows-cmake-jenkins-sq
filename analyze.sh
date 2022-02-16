@@ -11,6 +11,6 @@ curl --create-dirs -sSLo $HOME/.sonar/build-wrapper.zip "${SONAR_SERVER_URL}/sta
 unzip -o $HOME/.sonar/build-wrapper.zip -d $HOME/.sonar/
 export PATH=$HOME/.sonar/build-wrapper-linux-x86:$PATH
 
-
+cmake -S . -B build
 build-wrapper-linux-x86-64 --out-dir $BW_OUTPUT cmake --build build/ --config Release
 sonar-scanner
